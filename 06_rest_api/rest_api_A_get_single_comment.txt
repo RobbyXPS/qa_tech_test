@@ -1,0 +1,69 @@
+Comment 107 was created via the front end, retrieved ID via get all comments api, re-retrieved via single ID call per the requirement. 
+
+Curl:
+
+```
+curl -X GET "https://qaexercise.jamacloud.com/rest/v1/comments/107" -H "accept: application/json" -H "jama-csrf-token: 95e24cef-176a-4d68-b90c-9b24cd14fb9f"
+```
+
+Response (200):
+
+Body:
+
+```
+{
+  "meta": {
+    "status": "OK",
+    "timestamp": "2019-12-17T22:20:22.320+0000"
+  },
+  "links": {
+    "data.createdBy": {
+      "type": "users",
+      "href": "https://qaexercise.jamacloud.com/rest/v1/users/{data.createdBy}"
+    },
+    "data.modifiedBy": {
+      "type": "users",
+      "href": "https://qaexercise.jamacloud.com/rest/v1/users/{data.modifiedBy}"
+    },
+    "data.location.item": {
+      "type": "items",
+      "href": "https://qaexercise.jamacloud.com/rest/v1/items/{data.location.item}"
+    }
+  },
+  "data": {
+    "id": 107,
+    "createdDate": "2019-12-17T22:12:06.000+0000",
+    "createdBy": 28,
+    "modifiedBy": 28,
+    "deleted": false,
+    "status": "OPEN",
+    "body": {
+      "text": "<p>This is a comment I added in the front end. (DONT DELETE ME PLEASE)<span data-j-autotag=\"1\">Re: <span data-j-object=\"ContourItem:7835\"></span></span></p>"
+    },
+    "commentType": "GENERAL",
+    "location": {
+      "item": 7835
+    },
+    "type": "comments"
+  }
+}
+```
+
+Headers:
+
+```
+ access-control-allow-headers: Content-Type, Accept, Authorization, api_key 
+ access-control-allow-methods: GET, POST, DELETE, PUT, OPTIONS 
+ cache-control: no-cache,no-store 
+ content-length: 780 
+ content-type: application/json 
+ date: Tue, 17 Dec 2019 22:20:22 GMT 
+ jamafishtag: {"originHost":"jamacore-5jnmhgej-ip-10-51-10-40","originUUID":"9436a698224e4ff2","tenantId":null,"breadCrumbDTOs":[]} 
+ pragma: no-cache 
+ server: nginx/1.14.2 
+ status: 200 
+ x-content-type-options: nosniff 
+ x-frame-options: SAMEORIGIN 
+ x-jama-node:  
+ x-xss-protection: 1; mode=block 
+```

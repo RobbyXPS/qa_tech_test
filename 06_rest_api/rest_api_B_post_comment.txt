@@ -1,0 +1,40 @@
+Curl:
+
+```
+curl -X POST "https://qaexercise.jamacloud.com/rest/v1/comments" -H "accept: application/json" -H "Content-Type: application/json" -H "jama-csrf-token: 95e24cef-176a-4d68-b90c-9b24cd14fb9f" -d "{ \"body\": { \"text\": \"HEYOH\" }, \"commentType\": \"GENERAL\"}"
+```
+
+Response (201):
+
+Body:
+
+```
+{
+  "meta": {
+    "status": "Created",
+    "timestamp": "2019-12-17T23:26:35.315+0000",
+    "location": "https://qaexercise.jamacloud.com/rest/v1/comments/116",
+    "id": 116
+  }
+}
+```
+
+Headers:
+
+```
+access-control-allow-headers: Content-Type, Accept, Authorization, api_key 
+ access-control-allow-methods: GET, POST, DELETE, PUT, OPTIONS 
+ cache-control: no-cache,no-store 
+ content-length: 148 
+ content-type: application/json 
+ date: Tue, 17 Dec 2019 23:26:35 GMT 
+ jamafishtag: {"originHost":"jamacore-5jnmhgej-ip-10-51-10-40","originUUID":"d754061a7838404b","tenantId":null,"breadCrumbDTOs":[]} 
+ location: https://qaexercise.jamacloud.com/rest/v1/comments/116 
+ pragma: no-cache 
+ server: nginx/1.14.2 
+ status: 201 
+ x-content-type-options: nosniff 
+ x-frame-options: SAMEORIGIN 
+ x-jama-node:  
+ x-xss-protection: 1; mode=block 
+```

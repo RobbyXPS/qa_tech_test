@@ -1,0 +1,46 @@
+Curl:
+```
+curl -X GET "https://qaexercise.jamacloud.com/rest/v1/users/current" -H "accept: application/json" -H "jama-csrf-token: 95e24cef-176a-4d68-b90c-9b24cd14fb9f"
+```
+
+Response (200):
+
+Body:
+```
+{
+  "meta": {
+    "status": "OK",
+    "timestamp": "2019-12-17T22:36:54.972+0000"
+  },
+  "links": {},
+  "data": {
+    "id": 28,
+    "username": "candidate-75730",
+    "firstName": "Candidate",
+    "lastName": "Candidate 75730",
+    "email": "no@no.no",
+    "title": "75730",
+    "licenseType": "FLOATING",
+    "active": true,
+    "type": "users"
+  }
+}
+```
+
+Headers:
+```
+access-control-allow-headers: Content-Type, Accept, Authorization, api_key 
+ access-control-allow-methods: GET, POST, DELETE, PUT, OPTIONS 
+ cache-control: no-cache,no-store 
+ content-length: 266 
+ content-type: application/json 
+ date: Tue, 17 Dec 2019 22:36:54 GMT 
+ jamafishtag: {"originHost":"jamacore-5jnmhgej-ip-10-51-10-137","originUUID":"4f922508ade14e34","tenantId":null,"breadCrumbDTOs":[]} 
+ pragma: no-cache 
+ server: nginx/1.14.2 
+ status: 200 
+ x-content-type-options: nosniff 
+ x-frame-options: SAMEORIGIN 
+ x-jama-node:  
+ x-xss-protection: 1; mode=block 
+```

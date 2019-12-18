@@ -1,0 +1,5 @@
+NOTES:
+
+- I wasn't able to get the suggested curl request working in my console. There might be some more info we can pass to users around how to better handle that issue. I think I am running into a `CSRF Exception` but I'm not sure what I am doing incorrectly. See ~/qa_tech_test/06_rest_api/csrf_exception_notes.txt for more info.
+
+- Bug: API for comment POST returns a 500 error if sent in the format suggested by the documentation. See ~/qa_tech_test/06_rest_api/potential_issues_images/unsuccessful_post_comment.png for more info.

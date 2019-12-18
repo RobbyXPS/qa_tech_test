@@ -1,0 +1,142 @@
+I was able to successfully complete the task in the api-docs page using the 'try it out' feature. 
+
+
+I was unsuccessful in getting it to work via my console. I'm not sure why but I likely haven't set up the security settings correctly. I get a similar error when accessing the url via Chrome. You can see the successful API calls below using the docs and the unsuccessful ones via Chrome & console. 
+
+
+REST API
+
+
+C. Use the API to get the current user (you). The answer should be the JSON response body that is returned
+
+
+*** Via API doc helper ***
+
+Request:
+
+curl -X GET "https://qaexercise.jamacloud.com/rest/v1/users/current" -H "accept: application/json" -H "jama-csrf-token: 95e24cef-176a-4d68-b90c-9b24cd14fb9f"
+
+Response: (200)
+
+Body:
+```
+{
+  "meta": {
+    "status": "OK",
+    "timestamp": "2019-12-17T21:54:13.802+0000"
+  },
+  "links": {},
+  "data": {
+    "id": 28,
+    "username": "candidate-75730",
+    "firstName": "Candidate",
+    "lastName": "Candidate 75730",
+    "email": "no@no.no",
+    "title": "75730",
+    "licenseType": "FLOATING",
+    "active": true,
+    "type": "users"
+  }
+}
+```
+
+Headers:
+```
+access-control-allow-headers: Content-Type, Accept, Authorization, api_key 
+ access-control-allow-methods: GET, POST, DELETE, PUT, OPTIONS 
+ cache-control: no-cache,no-store 
+ content-length: 266 
+ content-type: application/json 
+ date: Tue, 17 Dec 2019 21:54:13 GMT 
+ jamafishtag: {"originHost":"jamacore-5jnmhgej-ip-10-51-10-40","originUUID":"ab0341d0902440cb","tenantId":null,"breadCrumbDTOs":[]} 
+ pragma: no-cache 
+ server: nginx/1.14.2 
+ status: 200 
+ x-content-type-options: nosniff 
+ x-frame-options: SAMEORIGIN 
+ x-jama-node:  
+ x-xss-protection: 1; mode=block 
+```
+
+*** Via Console ***
+
+Request:
+
+```
+curl -X GET "https://qaexercise.jamacloud.com/rest/v1/users/current" -H "accept: application/json" -H "jama-csrf-token: 95e24cef-176a-4d68-b90c-9b24cd14fb9f" -v
+```
+
+Response: (401)
+
+```
+Note: Unnecessary use of -X or --request, GET is already inferred.
+*   Trying 52.34.195.183...
+* TCP_NODELAY set
+* Connected to qaexercise.jamacloud.com (52.34.195.183) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/ssl/cert.pem
+  CApath: none
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use h2
+* Server certificate:
+*  subject: OU=Domain Control Validated; CN=*.jamacloud.com
+*  start date: Feb 18 11:16:17 2019 GMT
+*  expire date: Apr 19 15:56:07 2021 GMT
+*  subjectAltName: host "qaexercise.jamacloud.com" matched cert's "*.jamacloud.com"
+*  issuer: C=US; ST=Arizona; L=Scottsdale; O=GoDaddy.com, Inc.; OU=http://certs.godaddy.com/repository/; CN=Go Daddy Secure Certificate Authority - G2
+*  SSL certificate verify ok.
+* Using HTTP2, server supports multi-use
+* Connection state changed (HTTP/2 confirmed)
+* Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+* Using Stream ID: 1 (easy handle 0x7ff618800400)
+> GET /rest/v1/users/current HTTP/2
+> Host: qaexercise.jamacloud.com
+> User-Agent: curl/7.54.0
+> accept: application/json
+> jama-csrf-token: 95e24cef-176a-4d68-b90c-9b24cd14fb9f
+>
+* Connection state changed (MAX_CONCURRENT_STREAMS updated)!
+< HTTP/2 401
+< date: Tue, 17 Dec 2019 21:48:56 GMT
+< content-type: application/json
+< content-length: 90
+< server: nginx/1.14.2
+< jamafishtag: {"originHost":"jamacore-5jnmhgej-ip-10-51-10-180","originUUID":"9a43744c9f17432b","tenantId":null,"breadCrumbDTOs":[]}
+< x-jama-node:
+< x-content-type-options: nosniff
+< set-cookie: jama-csrf-token=48938b20-223f-4196-803f-97494198e0a1; Domain=qaexercise.jamacloud.com; Path=/
+< x-frame-options: SAMEORIGIN
+< x-xss-protection: 1; mode=block
+< set-cookie: jamaContourServerTime=1576619336392; Path=/
+< set-cookie: jamaContourSessionExpiry=1576619336392; Path=/
+< pragma: no-cache
+< cache-control: no-cache,no-store
+< access-control-allow-methods: GET, POST, DELETE, PUT, OPTIONS
+< access-control-allow-headers: Content-Type, Accept, Authorization, api_key
+< set-cookie: JSESSIONID=a01e06a1-db1e-4d06-9c5f-7a92abafed3f; Path=/; Secure; HttpOnly
+<
+* Connection #0 to host qaexercise.jamacloud.com left intact
+{"meta":{"status":"Unauthorized","timestamp":"2019-12-17T21:48:56.401+0000","message":""}}%
+```
+
+*** Via Chrome directly ***
+
+In Chrome enter the following in the url field: `https://qaexercise.jamacloud.com/rest/v1/users/current`
+
+Get back:
+`
+{"meta":{"status":"Unauthorized","timestamp":"2019-12-17T22:02:32.695+0000","message":"CSRF Exception"}}
+`
