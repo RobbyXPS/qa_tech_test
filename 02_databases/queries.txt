@@ -1,0 +1,16 @@
+Databases 
+A.
+SELECT * FROM jama_test01.clients
+WHERE size='L';
+
+B.
+UPDATE jama_test01.features
+SET enabled = ’T’
+WHERE name = 'SpaceshipPlugin';
+
+C.
+SELECT *
+FROM jama_test01.features 
+WHERE 
+    addeddate >= '2017-01-01T00:00:00.000' AND 
+    addeddate <= '2017-12-31T23:59:59.599'

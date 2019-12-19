@@ -1,4 +1,4 @@
-Comment 107 was created via the front end, retrieved ID via get all comments api, re-retrieved via single ID call per the requirement. 
+Comment 107 was created via the front end, retrieved ID via GET all comments api, re-retrieved via single ID call per the requirement. 
 
 Curl:
 

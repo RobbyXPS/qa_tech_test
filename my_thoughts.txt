@@ -1,0 +1,54 @@
+This was a really fun test, I think it did a great job of testing a variety of skills in a way that fits the real world. I appreciate all the team members that put it together, thank you. 
+
+I've listed some of my thought process below and some links to resources I used to complete these tasks.
+
+******Command Shell****** (Incomplete)
+
+**Part A:**
+- My coding skills are still more at a Jr. level so I time boxed the command shell activities to the first 2 days to see how far I could get. I've been wanting to practice my Python skills more so I chose to run with that language for the task. - I got a script that fulfills the requirements which I feel good about, but I still have some more functionality I'd like to add to it. Below are the things I'd like to add if time allows.
+# 1. Update hard coded replace string 'contour' with regex that will match case sensitivity
+# 2. Test with different file types 1.file with many case sensitive versions of 'contour', 2. empty text file, 3. string exist multiple times on same line, 4. large file with old english characters
+# 3. Create log output that gives user more info about which files were touched and how many times a match was found
+
+**Part B:**
+- I think I can leverage a lot of the code I wrote in part A here and get the files containing log to be copied locally. I've never had to move anything to a remote machine so that part may take some time. 
+
+- Python resources that I referenced to complete the task:
+	- https://stackoverflow.com/questions/5137497/find-current-directory-and-files-directory
+	- https://www.tutorialspoint.com/python/os_walk.htm
+	- https://www.w3schools.com/python/python_arrays.asp
+	- https://stackoverflow.com/questions/5137497/find-current-directory-and-files-directory
+	- https://stackoverflow.com/questions/19587118/iterating-through-directories-with-python
+	- https://www.geeksforgeeks.org/python-string-replace/
+	- https://www.geeksforgeeks.org/with-statement-in-python/
+	- https://pythonexamples.org/python-replace-string-in-file/
+
+******Databases****** (complete)
+
+- I have had limited exposure to SQL queries but I was able to get the MySQL Workbench tool up and running. It was very easy to use and I enjoyed being able to use a GUI to perform most of the heavy lifting for a process I was unfamiliar with.  Seeing the queries execute on actual tables that I could see gave me confidence that I was performing the task correctly and landed on solid answers. 
+
+- mySQL + Workbench resources that I referenced to complete the task:
+	- https://www.mysql.com/products/workbench/
+	- https://www.youtube.com/watch?v=ltYNt44c2xo
+	- https://www.youtube.com/watch?v=2ZCq219xiDc
+	- https://www.youtube.com/watch?v=1xs8LbEL_CI
+	- https://www.youtube.com/watch?v=bzPGh9vc-mg
+	- https://www.w3schools.com/sql/sql_where.asp
+	- https://www.w3schools.com/sql/sql_update.asp
+
+******Browser Testing****** (complete)
+
+- I have a lot experience navigating the DOM so I felt comfortable in this task. The requirement for section B seemed a little ambiguous to me, I tried to find any elements with display:hidden in the DOM but couldn't find anything. I assumed that 'hidden' hint meant the commented out section containing the sha so that was the answer I provided. 
+
+******Test Authoring****** (complete)
+
+- During the phone screens it sounded like this role would need a good sense for test planning and test case writing. The provided story was for a large feature and I made many assumptions about what may be implemented and what services are available. I wrote a test plan that outlined many of the concerns/plans that I have encountered in previous roles as well as some of the deployment and team role/structure I have worked in. I provided a few different types of test cases (system, functional UI, API) that a team may encounter over a large project like login.
+
+******Exploratory****** (complete)
+
+- I really enjoyed exploring some of the product. I limited it to only a few hours because I feel this is my strongest skill set so I stopped after finding a few issues and potential design change requests. I've worked in companies that don't do any formal reporting for exploratory testing and some that do, I attached a more formal report that I have seen used in the past. It was nice to find some higher sev issues (500 errors) as well as some more minor issues such as design change requests. 
+
+******REST API****** (complete)
+
+- It was interesting to look over the API docs to see more of how the Jama system works. I ran out of time to do much exploratory testing in this area but would love to circle back to it. 
+- I also encountered some issues trying to run API requests from my terminal, I'd love to understand more about this. I'm not sure if it's something I am doing wrong or if the systems security settings only allow API requests from the API Docs page. See ~/qa_tech_test/06_rest_api/csrf_exception_notes.txt for more info
